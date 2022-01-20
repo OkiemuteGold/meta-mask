@@ -69,6 +69,11 @@ svg {
   align-items: center;
 }
 
+.navbar-toggler-icon svg {
+  height: 1.3rem;
+  width: 1.3rem;
+}
+
 .nav_links {
   font-size: var(--font14);
   color: var(--blueL);
