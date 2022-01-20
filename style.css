@@ -52,6 +52,20 @@ svg {
   vertical-align: middle;
 }
 
+.navbar-collapse {
+  flex-grow: initial;
+}
+
+.navbar-brand {
+  margin-right: 0;
+}
+
+.navbar-toggler-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .nav_links {
   font-size: var(--font14);
   color: var(--blueL);
@@ -185,7 +199,7 @@ svg {
 
 @media (min-width: 768px) {
   .hero {
-    margin-bottom: 16px;
+    margin-bottom: 20px;
   }
 }
     
