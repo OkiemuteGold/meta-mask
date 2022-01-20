@@ -26,7 +26,9 @@ body {
   color: var(--black);
 }
 
-a, input {
+a, 
+button, 
+input {
   -o-transition: 0.35s;
   -moz-transition: 0.35s;
   -webkit-transition: 0.35s;
@@ -140,7 +142,7 @@ svg {
   border: 1px solid var(--blueD);
   border-radius: 4px;
   margin: 0 0 30px;
-  max-width: 100%;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -222,10 +224,6 @@ svg {
   width: 100%;
 }
 
-.dropdown-menu:active {
-  text-decoration: underline;
-}
-
 .dropdown-item {
   font-size: 14px;
   font-weight: normal;
@@ -241,6 +239,11 @@ svg {
   top: -65px;
   left: -70px;
   margin-bottom: 0.125rem;
+}
+
+.dropdown-toggle:focus,
+.dropdown-toggle:active {
+  text-decoration: underline;
 }
 
 .dropdown-toggle::after {

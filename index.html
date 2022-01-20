@@ -16,6 +16,7 @@
 
 <body>
     <div class="container px-0 px-md-5">
+        <!-- header -->
         <header
             class="navbar navbar-expand-lg d-flex flex-md-row align-items-center justify-content-between px-2 py-3 px-md-4 bg-white">
 
@@ -25,7 +26,15 @@
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#myMenu"
                 aria-controls="myMenu" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon">X</span>
+                <span class="navbar-toggler-icon">
+                    <svg viewBox="0 0 100 80" width="40" height="40">
+                        <rect width="100" height="15">
+                        </rect>
+                        <rect y="30" width="100" height="15">
+                        </rect>
+                        <rect y="60" width="100" height="15"></rect>
+                    </svg>
+                </span>
             </button>
 
             <nav class="my-2 my-md-0 mr-md-3 collapse navbar-collapse" id="myMenu">
@@ -35,12 +44,14 @@
         </header>
     </div>
 
+    <!-- hero -->
     <div class="hero"></div>
 
     <section id="issue_section" class="container text-center px-3 px-md-5">
         <div class="form_container">
             <p>Please start here, how can we help you?</p>
 
+            <!-- form -->
             <form class="search_container">
                 <input type="text" name="search" id="search" placeholder="Search" aria-placeholder="Search" />
 
@@ -56,40 +67,220 @@
             </form>
         </div>
 
+        <!-- short links -->
         <div class="short_link_container">
             <div class="row">
                 <div class="col-12 col-lg-6 col-xl-4">
-                    <a href="" class="short_links">Get Started</a>
+                    <button class="short_links" data-bs-toggle="modal" data-bs-target="#gStartedModal">Get
+                        Started</button>
                 </div>
                 <div class="col-12 col-lg-6 col-xl-4">
-                    <a href="" class="short_links">Managing my Account</a>
+                    <button class="short_links" data-bs-toggle="modal" data-bs-target="#accountModal">Managing my
+                        Account</button>
                 </div>
                 <div class="col-12 col-lg-6 col-xl-4">
-                    <a href="" class="short_links">Token Swaps</a>
-                </div>
-
-                <div class="col-12 col-lg-6 col-xl-4">
-                    <a href="" class="short_links">Managing my Tokens</a>
-                </div>
-                <div class="col-12 col-lg-6 col-xl-4">
-                    <a href="" class="short_links">Transactions and Gas</a>
-                </div>
-                <div class="col-12 col-lg-6 col-xl-4">
-                    <a href="" class="short_links">Networks and Sidechains</a>
+                    <button class="short_links" data-bs-toggle="modal" data-bs-target="#swapTokenModal">Token
+                        Swaps</button>
                 </div>
 
                 <div class="col-12 col-lg-6 col-xl-4">
-                    <a href="" class="short_links">Privacy and Security</a>
+                    <button class="short_links" data-bs-toggle="modal" data-bs-target="#manageTokenModal">Managing my
+                        Tokens</button>
                 </div>
                 <div class="col-12 col-lg-6 col-xl-4">
-                    <a href="" class="short_links">Troubleshooting</a>
+                    <button class="short_links" data-bs-toggle="modal" data-bs-target="#tGasModal">Transactions and
+                        Gas</button>
+                </div>
+                <div class="col-12 col-lg-6 col-xl-4">
+                    <button class="short_links" data-bs-toggle="modal" data-bs-target="#networksModal">Networks and
+                        Sidechains</button>
+                </div>
+
+                <div class="col-12 col-lg-6 col-xl-4">
+                    <button class="short_links" data-bs-toggle="modal" data-bs-target="#privacyModal">Privacy and
+                        Security</button>
+                </div>
+                <div class="col-12 col-lg-6 col-xl-4">
+                    <button class="short_links" data-bs-toggle="modal"
+                        data-bs-target="#troubleshootingModal">Troubleshooting</button>
                 </div>
                 <div class="col-12 col-lg-12 col-xl-4">
-                    <a href="" class="short_links">FAQ</a>
+                    <button class="short_links" data-bs-toggle="modal" data-bs-target="#faqModal">FAQ</button>
                 </div>
             </div>
         </div>
 
+        <!-- ALL MODALS ----------->
+        <!-- Get Started -->
+        <div class="modal fade" id="gStartedModal" tabindex="-1" aria-labelledby="gStartedModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="gStartedModalLabel">Get Started</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Managing Account -->
+        <div class="modal fade" id="accountModal" tabindex="-1" aria-labelledby="accountModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="accountModalLabel">Managing Account</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Token Swaps -->
+        <div class="modal fade" id="swapTokenModal" tabindex="-1" aria-labelledby="swapTokenModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="swapTokenModalLabel">Token Swaps</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Managing Tokens -->
+        <div class="modal fade" id="manageTokenModal" tabindex="-1" aria-labelledby="manageTokenModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="manageTokenModalLabel">Managing Tokens</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Transactions and Gas -->
+        <div class="modal fade" id="tGasModal" tabindex="-1" aria-labelledby="tGasModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="tGasModalLabel">Transactions and Gas</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Networks and Sidechains -->
+        <div class="modal fade" id="networksModal" tabindex="-1" aria-labelledby="networksModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="networksModalLabel">Networks and Sidechains</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Privacy and Security -->
+        <div class="modal fade" id="privacyModal" tabindex="-1" aria-labelledby="privacyModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="privacyModalLabel">Privacy and Security</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Troubleshooting -->
+        <div class="modal fade" id="troubleshootingModal" tabindex="-1" aria-labelledby="troubleshootingModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="troubleshootingModalLabel">Troubleshooting</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- FAQ -->
+        <div class="modal fade" id="faqModal" tabindex="-1" aria-labelledby="faqModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="faqModalLabel">FAQ</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ALL MODALS END -------------->
+
+        <!-- community -->
         <div class="community border-top border-bottom">
             <div class="community_link">
                 <a href="">Join the discussions on Community to learn more.</a>
@@ -108,21 +299,11 @@
             </div>
         </div>
 
+        <!-- empty space -->
         <div class="empty_space"></div>
     </section>
 
-    <!-- <div class="btn-group">
-        <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown"
-            data-bs-display="static" aria-expanded="false">
-            Left-aligned but right aligned when large screen
-        </button>
-        <ul class="dropdown-menu dropdown-menu-lg-end">
-            <li><button class="dropdown-item" type="button">Action</button></li>
-            <li><button class="dropdown-item" type="button">Another action</button></li>
-            <li><button class="dropdown-item" type="button">Something else here</button></li>
-        </ul>
-    </div> -->
-
+    <!-- footer -->
     <div class="container-fluid px-0 px-md-4 border-top">
         <footer class="footer px-xl-0">
             <div class="left">
@@ -130,8 +311,7 @@
             </div>
             <div class="right btn-group">
                 <button class="m-0 dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static"
-                    aria-expanded="false">
-                    English (US)</button>
+                    aria-expanded="false">English (US)</button>
 
                 <ul class="dropdown-menu">
                     <li><button class="dropdown-item" type="button">Espanol</button></li>
