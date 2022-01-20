@@ -6,6 +6,7 @@
   --offBlack: #333;
   --black: #000;
   --white: #fff;
+  --offWhite: #f3f3f3;
   --font12: 12px;
   --font14: 14px;
   --font15: 15px;
@@ -72,7 +73,8 @@ svg {
 }
 
 .nav_links:hover, 
-.community_link a:hover {
+.community_link a:hover, 
+.footer .left a:hover {
   text-decoration: underline;
 }
 
@@ -111,7 +113,6 @@ svg {
   color: var(--gray);
   padding-left: 45px;
   padding-right: 20px;
-  -webkit-appearance: none;
 }
 
 .search_container input:focus {
@@ -196,14 +197,62 @@ svg {
   justify-content: space-between;
 }
 
+.footer .left a, 
+.footer .right > button  {
+  font-size: var(--font15);
+}
 
-@media (min-width: 768px) {
-  .hero {
-    margin-bottom: 20px;
-  }
+.footer .left a {
+  color: var(--offBlack);
+}
+
+.footer .right > button  {
+  background: none;
+  border: 0;
+  padding: 0;
+  text-align: left;
+  font-weight: 300;
+}
+
+.dropdown-menu {
+  padding: 8px 0 8px 0;
+  white-space: nowrap;
+  background: transparent;
+  line-height: inherit;
+  width: 100%;
+}
+
+.dropdown-menu:active {
+  text-decoration: underline;
+}
+
+.dropdown-item {
+  font-size: 14px;
+  font-weight: normal;
+  padding: 7px 20px 7px 20px;
+  color: #333;
+}
+
+.dropdown-menu:hover .dropdown-item {
+  background: var(--offWhite);
+}
+
+.dropdown-menu[data-bs-popper] {
+  top: -65px;
+  left: -70px;
+  margin-bottom: 0.125rem;
+}
+
+.dropdown-toggle::after {
+  margin-left: 0.5em;
+  vertical-align: 0.25em;
 }
     
 @media screen and (min-width: 768px) {
+  .hero {
+    margin-bottom: 20px;
+  }
+
   .search_container {
     max-width: 600px;
     margin: auto;
